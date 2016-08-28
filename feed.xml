@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
+    <title>大伟的博客</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 11:01:27 +0800</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 11:01:27 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 11:19:01 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 11:19:01 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>南翔轮滑</title>
+        <description>&lt;p&gt;昨天去南翔轮滑了,就在家乐福后面的那个小区,小区的地板还不错,但是距离太短了,只能来回滑= =。&lt;/p&gt;
+
+&lt;p&gt;感觉昨天的运动量还可以,好像慢慢也比较熟练了。但是就是感觉轮滑鞋不够贴紧脚,可能有点大吧,也许买41号可以正好。&lt;/p&gt;
+
+&lt;p&gt;下次周末有空再去滑,学点新东西感觉还是棒棒哒,特别是滑快的话还是很酷哒。&lt;/p&gt;
+
+&lt;p&gt;我这把年纪了,感觉轮滑像是小孩玩的东西了。不过我的目的还是学习,学习新东西,恩恩,增加自信,然后再强健体魄,这是最重要哒
+哈哈哈哈哈&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Aug 2016 11:01:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/08/28/%E8%BD%AE%E6%BB%91.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/08/28/%E8%BD%AE%E6%BB%91.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
