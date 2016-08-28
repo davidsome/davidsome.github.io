@@ -6,13 +6,19 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 21:31:12 +0800</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 21:31:12 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 21:48:32 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 21:48:32 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>深夜有感</title>
-        <description>
+        <description>&lt;p&gt;今年24岁了&lt;/p&gt;
+
+&lt;p&gt;给自己定个目标&lt;/p&gt;
+
+&lt;p&gt;1、找个靠谱的对象
+2、变得更加善于交际,做到技术不宅
+3、增强体魄,尝试更多新玩意儿&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Aug 2016 21:18:14 +0800</pubDate>
         <link>http://yourdomain.com/jekyll/update/2016/08/28/%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F.html</link>
