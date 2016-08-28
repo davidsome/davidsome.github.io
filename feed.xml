@@ -6,9 +6,24 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 16:05:08 +0800</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 16:05:08 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 21:31:12 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 21:31:12 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>深夜有感</title>
+        <description>
+</description>
+        <pubDate>Sun, 28 Aug 2016 21:18:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/08/28/%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/08/28/%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>南翔轮滑</title>
