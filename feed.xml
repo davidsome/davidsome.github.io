@@ -6,9 +6,45 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 21:48:32 +0800</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 21:48:32 +0800</lastBuildDate>
+    <pubDate>Tue, 30 Aug 2016 23:07:41 +0800</pubDate>
+    <lastBuildDate>Tue, 30 Aug 2016 23:07:41 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>每周二欢乐羽毛球</title>
+        <description>&lt;p&gt;说起每周二欢乐羽毛球,故事是这么由来的。&lt;/p&gt;
+
+&lt;p&gt;传说有一个神秘组织叫CIS,俗称技术保障大队。这个神秘组织由一群精英组成,这群精英中有各路高手。&lt;/p&gt;
+
+&lt;p&gt;高手各有特长,比如&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;玩大数据的&lt;/li&gt;
+  &lt;li&gt;玩编程开发的&lt;/li&gt;
+  &lt;li&gt;玩应用的&lt;/li&gt;
+  &lt;li&gt;玩服务器和网络的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这群人虽然非常厉害,十分低调。但是他们有一个共同的特征,就是他们都酷爱羽毛球。&lt;/p&gt;
+
+&lt;p&gt;他们想象自己是超级丹,球场之王,一次次跑动,漂亮的截杀,扣杀。&lt;/p&gt;
+
+&lt;p&gt;总之,酣畅淋漓!!!炫酷无比!!!&lt;/p&gt;
+
+&lt;p&gt;后来,CIS这个神秘组织知道了这么一群人,于是每周二就有了欢乐羽毛球。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;于是每周我都在想,这个周二即将过去,下一个周二还会远吗?&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Aug 2016 22:45:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/08/28/%E6%AF%8F%E5%91%A8%E4%BA%8C%E6%AC%A2%E4%B9%90%E7%BE%BD%E6%AF%9B%E7%90%83.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/08/28/%E6%AF%8F%E5%91%A8%E4%BA%8C%E6%AC%A2%E4%B9%90%E7%BE%BD%E6%AF%9B%E7%90%83.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>深夜有感</title>
