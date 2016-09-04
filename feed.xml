@@ -6,9 +6,40 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Sep 2016 22:10:05 +0800</pubDate>
-    <lastBuildDate>Sun, 04 Sep 2016 22:10:05 +0800</lastBuildDate>
+    <pubDate>Sun, 04 Sep 2016 22:51:50 +0800</pubDate>
+    <lastBuildDate>Sun, 04 Sep 2016 22:51:50 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>摩拜单车</title>
+        <description>&lt;p&gt;今天第一次体验了把摩拜单车(&lt;a href=&quot;http://mobike.com/&quot;&gt;mobike&lt;/a&gt;),顿时感到心情久违的愉快和放松。&lt;/p&gt;
+
+&lt;p&gt;互联网给社会带来的变化真的是太大了。&lt;/p&gt;
+
+&lt;p&gt;变化不仅仅是大,而且感觉很赞很棒。&lt;/p&gt;
+
+&lt;p&gt;有了这单车,随便找一个附近的自行车,随便骑到哪儿,随便找路边那么一停。感觉无比的轻松自由啊。&lt;/p&gt;
+
+&lt;p&gt;以后就不怕回家不方便了。因为随便找一车,说走就走。&lt;/p&gt;
+
+&lt;p&gt;真是good idea,算是解决了人们出行的一个痛点。&lt;/p&gt;
+
+&lt;p&gt;也解决了车主交通拥堵,停车难的问题。&lt;/p&gt;
+
+&lt;p&gt;好的我决定了,从此我的爱好除了羽毛球,游泳,轮滑,新增一项就是&lt;strong&gt;骑车&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/davidsome/davidsome.github.io/blog/master/img/mobike.jpg&quot; alt=&quot;mobike&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Sep 2016 22:45:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/09/04/%E6%91%A9%E6%8B%9C%E5%8D%95%E8%BD%A6.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/09/04/%E6%91%A9%E6%8B%9C%E5%8D%95%E8%BD%A6.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>每周二欢乐羽毛球</title>
@@ -38,29 +69,6 @@
         <pubDate>Tue, 30 Aug 2016 22:45:14 +0800</pubDate>
         <link>http://yourdomain.com/jekyll/update/2016/08/30/%E6%AF%8F%E5%91%A8%E4%BA%8C%E6%AC%A2%E4%B9%90%E7%BE%BD%E6%AF%9B%E7%90%83.html</link>
         <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/08/30/%E6%AF%8F%E5%91%A8%E4%BA%8C%E6%AC%A2%E4%B9%90%E7%BE%BD%E6%AF%9B%E7%90%83.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>深夜有感</title>
-        <description>&lt;p&gt;今年24岁了&lt;/p&gt;
-
-&lt;p&gt;给自己定个目标&lt;/p&gt;
-
-&lt;p&gt;1、找个靠谱的对象&lt;/p&gt;
-
-&lt;p&gt;2、变得更加善于交际,做到技术不宅&lt;/p&gt;
-
-&lt;p&gt;3、增强体魄,尝试更多新玩意儿&lt;/p&gt;
-</description>
-        <pubDate>Sun, 28 Aug 2016 21:18:14 +0800</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2016/08/28/%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/08/28/%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F.html</guid>
         
         
         <category>jekyll</category>
