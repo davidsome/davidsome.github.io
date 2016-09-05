@@ -6,9 +6,26 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Sep 2016 23:02:57 +0800</pubDate>
-    <lastBuildDate>Sun, 04 Sep 2016 23:02:57 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Sep 2016 22:32:34 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Sep 2016 22:32:34 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>看晓松奇谈有感</title>
+        <description>&lt;p&gt;每周五看晓松奇谈已经成为了我的一个习惯。最喜欢的就是听晓松讲各国文化,历史,地理,风土人情等等。&lt;/p&gt;
+
+&lt;p&gt;希望晓松继续带我装逼带我飞。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Sep 2016 22:25:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/09/05/%E7%9C%8B%E6%99%93%E6%9D%BE%E5%A5%87%E8%B0%88%E6%9C%89%E6%84%9F.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/09/05/%E7%9C%8B%E6%99%93%E6%9D%BE%E5%A5%87%E8%B0%88%E6%9C%89%E6%84%9F.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>摩拜单车</title>
