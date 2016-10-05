@@ -6,9 +6,95 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Oct 2016 10:08:09 +0800</pubDate>
-    <lastBuildDate>Sun, 02 Oct 2016 10:08:09 +0800</lastBuildDate>
+    <pubDate>Wed, 05 Oct 2016 15:38:29 +0800</pubDate>
+    <lastBuildDate>Wed, 05 Oct 2016 15:38:29 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>SRE Google运维解密读后感</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://davidsome.github.io/img/SRE_Google.jpeg&quot; alt=&quot;SRE_Google&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们都知道Google公司的分布式系统设计和实现在业界遥遥领先,这些分布式系统多年前就已经运行在百万台服务器上,
+很多公司也都在觊觎这么多服务器是如何运行和管理的。SRE就是运行和管理这百万台服务器和众多分布式系统的关键。&lt;/p&gt;
+
+&lt;p&gt;多年前,Google是通过发布技术论文帮助业界解决分布式难题的,如今各种分布式系统百花齐放,如何管理这些系统对传统的运维技术
+和理念产生了极大的挑战。现在Google给我们带来了技术指导和最佳实践。&lt;/p&gt;
+
+&lt;p&gt;SRE是Site Reliability Engineer的简称，从名字可以看出Google的SRE不只是做Operation方面的工作，更多是保障整个Google服务的稳定性。
+SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数据中心的硬件层面的维护工作是交给technician来做的，technician一般不需要有大学学历。&lt;/p&gt;
+
+&lt;p&gt;SRE在Google不负责某个服务的上线、部署，SRE主要是保障服务的可靠性和性能，同时负责数据中心资源分配，为重要服务预留资源。&lt;/p&gt;
+
+&lt;p&gt;Google SRE全球共计约1000人,负责运维Google的全球生产系统。同时,SRE还负责运维幕后那些全球首屈一指的计算基础设施,不管是
+全球百万台级别的服务器集群,还是全球一流的网络架构,背后都有SRE的身影。&lt;/p&gt;
+
+&lt;p&gt;SRE是一群天生的怀疑论者,怀疑一切高大上的技术,只看具体的架构设计,实现细节,以及真实的监控图表。SRE在保障系统可靠性方面并没有
+什么万能药,有的只是极强的务实态度。这种务实的态度决定了SRE会认真对待运维问题。&lt;/p&gt;
+
+&lt;p&gt;该书主要介绍了以下几点&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拥抱风险&lt;/li&gt;
+  &lt;li&gt;服务质量目标SLO&lt;/li&gt;
+  &lt;li&gt;减少琐事&lt;/li&gt;
+  &lt;li&gt;分布式系统的监控&lt;/li&gt;
+  &lt;li&gt;Google自动化系统的演进&lt;/li&gt;
+  &lt;li&gt;发布工程&lt;/li&gt;
+  &lt;li&gt;简单化&lt;/li&gt;
+  &lt;li&gt;基于时间序列数据进行有效报警&lt;/li&gt;
+  &lt;li&gt;on-call轮值&lt;/li&gt;
+  &lt;li&gt;有效的故障排查手段&lt;/li&gt;
+  &lt;li&gt;紧急事件响应&lt;/li&gt;
+  &lt;li&gt;紧急事故管理&lt;/li&gt;
+  &lt;li&gt;事后总结: 从失败中学习&lt;/li&gt;
+  &lt;li&gt;跟踪故障&lt;/li&gt;
+  &lt;li&gt;测试可靠性&lt;/li&gt;
+  &lt;li&gt;SRE部门中的软件工程实践&lt;/li&gt;
+  &lt;li&gt;前端服务器的负载均衡&lt;/li&gt;
+  &lt;li&gt;数据中心内部的负载均衡系统&lt;/li&gt;
+  &lt;li&gt;应对过载&lt;/li&gt;
+  &lt;li&gt;处理连锁故障&lt;/li&gt;
+  &lt;li&gt;管理关键状态,利用分布式共识系统来提高可靠性&lt;/li&gt;
+  &lt;li&gt;分布式周期性任务系统&lt;/li&gt;
+  &lt;li&gt;数据处理流水线&lt;/li&gt;
+  &lt;li&gt;数据完整性,读写一致&lt;/li&gt;
+  &lt;li&gt;可靠地进行产品的大规模发布&lt;/li&gt;
+  &lt;li&gt;处理中断性任务&lt;/li&gt;
+  &lt;li&gt;SRE与其他团队的沟通与协作&lt;/li&gt;
+  &lt;li&gt;SRE参与模式的演进历程&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Google公司面临的问题都是世界级的,所以都是自研系统,结合业务,高效运维。
+并且可以看出Google的软件基础架构非常强大,首屈一指。以下是Google的软件基础架构系统。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Borg：分布式任务管理系统&lt;/li&gt;
+  &lt;li&gt;Borgmon：强大的监控报警系统&lt;/li&gt;
+  &lt;li&gt;BigTable：分布式Key/Value存储系统&lt;/li&gt;
+  &lt;li&gt;Google File System：分布式文件系统&lt;/li&gt;
+  &lt;li&gt;PubSub：分布式消息队列系统&lt;/li&gt;
+  &lt;li&gt;MapReduce：分布式大数据批处理系统&lt;/li&gt;
+  &lt;li&gt;F1：分布式数据库&lt;/li&gt;
+  &lt;li&gt;ECatcher：日志收集检索系统&lt;/li&gt;
+  &lt;li&gt;Stubby：Google的RPC实现&lt;/li&gt;
+  &lt;li&gt;Proto Buffer：数据序列化存储协议以及RPC协议&lt;/li&gt;
+  &lt;li&gt;Chubby：提供类似Zookeeper的服务&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;更多精彩内容请看SRE Google运维解密这本书籍吧。&lt;/p&gt;
+
+&lt;p&gt;邮件给我可以借阅哦。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Oct 2016 10:16:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/10/05/SRE-Google%E8%BF%90%E7%BB%B4%E8%A7%A3%E5%AF%86%E8%AF%BB%E5%90%8E%E6%84%9F.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/10/05/SRE-Google%E8%BF%90%E7%BB%B4%E8%A7%A3%E5%AF%86%E8%AF%BB%E5%90%8E%E6%84%9F.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>GOPS全球运维大会</title>
