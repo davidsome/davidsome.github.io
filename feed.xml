@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Oct 2016 22:17:20 +0800</pubDate>
-    <lastBuildDate>Sat, 22 Oct 2016 22:17:20 +0800</lastBuildDate>
+    <pubDate>Sat, 22 Oct 2016 22:21:43 +0800</pubDate>
+    <lastBuildDate>Sat, 22 Oct 2016 22:21:43 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -267,7 +267,7 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
     
       <item>
         <title>轮滑</title>
-        <description>&lt;h6 id=&quot;section&quot;&gt;2016/08/28&lt;/h6&gt;
+        <description>&lt;h3 id=&quot;section&quot;&gt;2016/08/28&lt;/h3&gt;
 
 &lt;p&gt;昨天去南翔轮滑了,就在家乐福后面的那个小区,小区的地板还不错,但是距离太短了,只能来回滑= =。&lt;/p&gt;
 
@@ -281,7 +281,7 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
 
 &lt;p&gt;哈哈哈哈哈&lt;/p&gt;
 
-&lt;h6 id=&quot;section-1&quot;&gt;2016/10/15&lt;/h6&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;2016/10/15&lt;/h3&gt;
 
 &lt;p&gt;后来我又去了次轮滑,这次是在家旁边的一家公司里面,公司里面的路面蛮平整的,两条道,就这样来回滑,听听歌,满放松的。&lt;/p&gt;
 
