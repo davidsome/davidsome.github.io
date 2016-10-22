@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Oct 2016 22:10:45 +0800</pubDate>
-    <lastBuildDate>Sat, 22 Oct 2016 22:10:45 +0800</lastBuildDate>
+    <pubDate>Sat, 22 Oct 2016 22:16:09 +0800</pubDate>
+    <lastBuildDate>Sat, 22 Oct 2016 22:16:09 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -267,7 +267,7 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
     
       <item>
         <title>轮滑</title>
-        <description>&lt;h6 id=&quot;section&quot;&gt;2016/08/14&lt;/h6&gt;
+        <description>&lt;h6 id=&quot;section&quot;&gt;2016/08/28&lt;/h6&gt;
 
 &lt;p&gt;昨天去南翔轮滑了,就在家乐福后面的那个小区,小区的地板还不错,但是距离太短了,只能来回滑= =。&lt;/p&gt;
 
@@ -289,9 +289,9 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
 
 &lt;p&gt;其实我也知道,哈哈,后来被赶出去了。可是他趾高气昂,这点让我不爽,素质有点差啊。&lt;/p&gt;
 </description>
-        <pubDate>Sun, 14 Aug 2016 11:01:14 +0800</pubDate>
-        <link>http://yourdomain.com/life/2016/08/14/%E8%BD%AE%E6%BB%91.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/life/2016/08/14/%E8%BD%AE%E6%BB%91.html</guid>
+        <pubDate>Sun, 28 Aug 2016 11:01:14 +0800</pubDate>
+        <link>http://yourdomain.com/life/2016/08/28/%E8%BD%AE%E6%BB%91.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/life/2016/08/28/%E8%BD%AE%E6%BB%91.html</guid>
         
         
         <category>life</category>
