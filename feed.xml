@@ -6,9 +6,40 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Oct 2016 22:21:43 +0800</pubDate>
-    <lastBuildDate>Sat, 22 Oct 2016 22:21:43 +0800</lastBuildDate>
+    <pubDate>Sat, 29 Oct 2016 10:02:35 +0800</pubDate>
+    <lastBuildDate>Sat, 29 Oct 2016 10:02:35 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>ctrip司庆日</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;携程在手,说走就走&lt;/h3&gt;
+
+&lt;p&gt;每年的10月28日是我司的生日,公司都会举办colorful day来庆祝,有各种cosplay,美食等好玩的活动。&lt;/p&gt;
+
+&lt;p&gt;今年我司17岁啦,像James所说的,是一个茁壮成长的青年人啦。&lt;/p&gt;
+
+&lt;p&gt;作为一名携程技术人,我毕业后选择了这里,度过了近第三个年头。&lt;/p&gt;
+
+&lt;p&gt;我司从OTA拼杀纷争到如今的一家独大,无疑创造了一个个奇迹,如BUG般的存在。&lt;/p&gt;
+
+&lt;p&gt;作为一名程里人,我骄傲,我自豪。&lt;/p&gt;
+
+&lt;p&gt;虽然我司的成长并非一帆风顺,但是谁又不是呢?加油,作为一名技术人,我们的愿景就是用技术创新支撑业务的10x增长,&lt;/p&gt;
+
+&lt;p&gt;向中国互联网的第四极目标奋进。&lt;/p&gt;
+
+&lt;p&gt;今天,我衷心地祝福我程生日快乐,并且继续和我司并肩战斗,向更高的目标前进。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://davidsome.github.io/img/ctripbirth.jpg&quot; alt=&quot;ctripbirth&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 28 Oct 2016 10:16:14 +0800</pubDate>
+        <link>http://yourdomain.com/work/2016/10/28/ctrip%E5%8F%B8%E5%BA%86%E6%97%A5.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2016/10/28/ctrip%E5%8F%B8%E5%BA%86%E6%97%A5.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>SRE Google运维解密读后感</title>
