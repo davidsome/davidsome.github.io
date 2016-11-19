@@ -6,9 +6,23 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 12:04:12 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 12:04:12 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 12:29:01 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 12:29:01 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>荣誉墙</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://davidsome.github.io/img/image1.JPG&quot; alt=&quot;tech1&quot; /&gt;
+&lt;img src=&quot;https://davidsome.github.io/img/image2.JPG&quot; alt=&quot;tech2&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Nov 2016 10:16:14 +0800</pubDate>
+        <link>http://yourdomain.com/work/2016/11/19/%E8%8D%A3%E8%AA%89%E5%A2%99.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2016/11/19/%E8%8D%A3%E8%AA%89%E5%A2%99.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>拍牌</title>
