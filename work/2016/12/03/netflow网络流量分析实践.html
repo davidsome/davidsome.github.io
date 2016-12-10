@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>GOPS全球运维大会</title>
-  <meta name="description" content="万众期待的GOPS2016全球运维大会-上海站于2016年9月23-24日在雅乐新天地酒店盛大举行。">
+  <title>netflow网络流量分析实践</title>
+  <meta name="description" content="本期分享的内容是关于网络运维可视化中最重要的一环，即网络流量分析与展现。背景   随着互联网的发展，应用种类越来越多，造成网络流量越来越大，流量成分越来越复杂。当网络出现延时，丢包等情况，急需通过流量分析的手段来定位故障。于是业界产生了思科netflow为主的流量分析协议，类似的协议的还有sflow,华为的net...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/work/2016/10/01/GOPS%E5%85%A8%E7%90%83%E8%BF%90%E7%BB%B4%E5%A4%A7%E4%BC%9A.html">
+  <link rel="canonical" href="http://yourdomain.com/work/2016/12/03/netflow%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E5%AE%9E%E8%B7%B5.html">
   <link rel="alternate" type="application/rss+xml" title="大伟的博客" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -59,47 +59,47 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">GOPS全球运维大会</h1>
-    <p class="post-meta">日期 <time datetime="2016-10-01T16:16:14+08:00" itemprop="datePublished">Oct 1, 2016</time> 属于 work 分类</p>
+    <h1 class="post-title" itemprop="name headline">netflow网络流量分析实践</h1>
+    <p class="post-meta">日期 <time datetime="2016-12-03T10:00:14+08:00" itemprop="datePublished">Dec 3, 2016</time> 属于 work 分类</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>万众期待的GOPS2016全球运维大会-上海站于2016年9月23-24日在雅乐新天地酒店盛大举行。</p>
+    <p>本期分享的内容是关于网络运维可视化中最重要的一环，即网络流量分析与展现。</p>
 
-<p>我很有幸作为携程外派的志愿者参与了这项活动,并且获得了SRE google运维解密(签名版)这本书籍。</p>
+<p>背景
+   随着互联网的发展，应用种类越来越多，造成网络流量越来越大，流量成分越来越复杂。当网络出现延时，丢包等
+情况，急需通过流量分析的手段来定位故障。于是业界产生了思科netflow为主的流量分析协议，类似的协议的还有
+sflow,华为的netstream等等，与传统基于SNMP、网络探针、实时抓包分析方法不同，它利用Flow技术来收集网络中有关流量的重要信息，
+用于监视网络活动，帮助用户了解流量构成、协议分布和用户活动，回答谁(Who)在什么时间(When)、什么地方(Where)、执行什么行为(What)等最关心的问题。
+   公司之前使用商用的方案，成本较高。由于网络运维规模的日益增大，出于网络可视化的运维需求，我们设计并自研流量分析工具。</p>
 
-<p>我参与了云计算,海量运营,高可用架构这三个分会场和一个主会场开幕的场务工作。</p>
+<p>系统构架
+   收集模块：
+      （1）使用golang实现的收集器，将收集的flow包解析，进行简单的数据加工格式化，迅速送入消息队列，保证最快的收集性能。
+      （2）分布式部署，灵活可扩展。</p>
 
-<p>很有幸结识了 萧帮主,孙宇聪,大梁,kitty庞 等这些业界大牛。</p>
+<p>聚合模块：从消息队列里实时接收并聚合数据，可以多维度聚合，聚合完再送入消息队列。</p>
 
-<p>深受感触。</p>
+<p>存储模块：后端存储使用ES，使用hangout工具消费flow数据进ES。性能强劲，无延迟。</p>
 
-<p>重新定义运维, 这是我收获的名词, 运维 和 开发如何更紧密的结合,使得工作效率最大化,使得生产系统运行更加灵活,更加稳定。</p>
+<p>分析模块：web页面展示图表，报表功能，在界面上发起请求，实时分析数据，聚合并展现结果。</p>
 
-<p>DEVOPS 是我们一直在做的,也许 SRE 是我们努力的方向。50%运维,50%开发,这是新时代的高效运维。</p>
+<p>主要功能
+  流量监控 &amp; 分析，通过高速引擎对所接收的流数据进行解析，生成各种有用的图表，以满足带宽监视和流量分析的目的。</p>
 
-<p>高效运维工作需要标准化,平台化,服务化,智能化。需要有标准流程,自动化平台,智能监控,云计算,持续交付,信息安全等。</p>
+<p>容量规划，通过分析网络流量及带宽的使用趋势，为制定网络带宽容量规划提供数据支撑。</p>
 
-<p>总之,感谢一起参与活动的小伙伴,感谢大牛的分享,感谢萧帮主的盛会。</p>
+<p>支持主流设备和Flow协议分析，支持所有主流厂商的网络设备以及防火墙设备，能够解析NetFlow、sFlow、NetStream等协议。
+总结
+  通过该工具，能够第一时间帮助定位故障，实现网络流量可视化。</p>
 
-<p>我有幸作为互联网ctrip DEV OPS的一员,今天站在IT运维的风口浪尖,响应时代的召唤,相信我们会做的更出色。</p>
-
-<p>期待接下里的美国站,北京站能够继续发光发亮~~~</p>
-
-<p>摘要</p>
-
-<ul>
-  <li>互联网应用运维框架及能力模型 <a href="https://github.com/greatops/aops">https://github.com/greatops/aops</a> (诶哟不错哟)</li>
-  <li>复旦大学互联网运维在职硕士(什么鬼?)</li>
-  <li>微信公众号-高效运维(感兴趣的速度哦,干货分享~)</li>
-</ul>
 
   </div>
 
 </article>
 
   <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="/work/2016/10/01/GOPS全球运维大会" data-title="GOPS全球运维大会" data-url="https://davidsome.github.io//work/2016/10/01/GOPS%E5%85%A8%E7%90%83%E8%BF%90%E7%BB%B4%E5%A4%A7%E4%BC%9A.html"></div>
+	<div class="ds-thread" data-thread-key="/work/2016/12/03/netflow网络流量分析实践" data-title="netflow网络流量分析实践" data-url="https://davidsome.github.io//work/2016/12/03/netflow%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E5%AE%9E%E8%B7%B5.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

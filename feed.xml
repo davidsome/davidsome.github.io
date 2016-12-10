@@ -6,9 +6,89 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 12:40:05 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 12:40:05 +0800</lastBuildDate>
+    <pubDate>Sat, 10 Dec 2016 12:46:12 +0800</pubDate>
+    <lastBuildDate>Sat, 10 Dec 2016 12:46:12 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>三周年</title>
+        <description>&lt;p&gt;DEAR 毛咏伟，&lt;/p&gt;
+
+&lt;p&gt;还记得选择携程最初的理由吗？&lt;/p&gt;
+
+&lt;p&gt;年轻、纯真而饱含激情，相信你一直拥有着。&lt;/p&gt;
+
+&lt;p&gt;今天，是你和携程的周年纪念日，&lt;/p&gt;
+
+&lt;p&gt;又是一年，&lt;/p&gt;
+
+&lt;p&gt;你可能涨姿势了，涨米了，长肉了……&lt;/p&gt;
+
+&lt;p&gt;是携程，&lt;/p&gt;
+
+&lt;p&gt;见证了你的每一次牛逼，&lt;/p&gt;
+
+&lt;p&gt;容纳了你的每一次嚣张，&lt;/p&gt;
+
+&lt;p&gt;目睹了你的每一次精彩，&lt;/p&gt;
+
+&lt;p&gt;颤动了你的每一次心跳&lt;/p&gt;
+
+&lt;p&gt;……&lt;/p&gt;
+
+&lt;p&gt;让我们继续保有创业的野心与拼搏的冲劲，&lt;/p&gt;
+
+&lt;p&gt;永远”不知好歹”，永远热泪盈眶！&lt;/p&gt;
+</description>
+        <pubDate>Sat, 10 Dec 2016 10:00:14 +0800</pubDate>
+        <link>http://yourdomain.com/work/2016/12/10/%E4%B8%89%E5%91%A8%E5%B9%B4.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2016/12/10/%E4%B8%89%E5%91%A8%E5%B9%B4.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>netflow网络流量分析实践</title>
+        <description>&lt;p&gt;本期分享的内容是关于网络运维可视化中最重要的一环，即网络流量分析与展现。&lt;/p&gt;
+
+&lt;p&gt;背景
+   随着互联网的发展，应用种类越来越多，造成网络流量越来越大，流量成分越来越复杂。当网络出现延时，丢包等
+情况，急需通过流量分析的手段来定位故障。于是业界产生了思科netflow为主的流量分析协议，类似的协议的还有
+sflow,华为的netstream等等，与传统基于SNMP、网络探针、实时抓包分析方法不同，它利用Flow技术来收集网络中有关流量的重要信息，
+用于监视网络活动，帮助用户了解流量构成、协议分布和用户活动，回答谁(Who)在什么时间(When)、什么地方(Where)、执行什么行为(What)等最关心的问题。
+   公司之前使用商用的方案，成本较高。由于网络运维规模的日益增大，出于网络可视化的运维需求，我们设计并自研流量分析工具。&lt;/p&gt;
+
+&lt;p&gt;系统构架
+   收集模块：
+      （1）使用golang实现的收集器，将收集的flow包解析，进行简单的数据加工格式化，迅速送入消息队列，保证最快的收集性能。
+      （2）分布式部署，灵活可扩展。&lt;/p&gt;
+
+&lt;p&gt;聚合模块：从消息队列里实时接收并聚合数据，可以多维度聚合，聚合完再送入消息队列。&lt;/p&gt;
+
+&lt;p&gt;存储模块：后端存储使用ES，使用hangout工具消费flow数据进ES。性能强劲，无延迟。&lt;/p&gt;
+
+&lt;p&gt;分析模块：web页面展示图表，报表功能，在界面上发起请求，实时分析数据，聚合并展现结果。&lt;/p&gt;
+
+&lt;p&gt;主要功能
+  流量监控 &amp;amp; 分析，通过高速引擎对所接收的流数据进行解析，生成各种有用的图表，以满足带宽监视和流量分析的目的。&lt;/p&gt;
+
+&lt;p&gt;容量规划，通过分析网络流量及带宽的使用趋势，为制定网络带宽容量规划提供数据支撑。&lt;/p&gt;
+
+&lt;p&gt;支持主流设备和Flow协议分析，支持所有主流厂商的网络设备以及防火墙设备，能够解析NetFlow、sFlow、NetStream等协议。
+总结
+  通过该工具，能够第一时间帮助定位故障，实现网络流量可视化。&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 03 Dec 2016 10:00:14 +0800</pubDate>
+        <link>http://yourdomain.com/work/2016/12/03/netflow%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E5%AE%9E%E8%B7%B5.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2016/12/03/netflow%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E5%AE%9E%E8%B7%B5.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>荣誉墙</title>
@@ -314,73 +394,6 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
         <pubDate>Sun, 04 Sep 2016 22:45:14 +0800</pubDate>
         <link>http://yourdomain.com/life/2016/09/04/%E6%91%A9%E6%8B%9C%E5%8D%95%E8%BD%A6.html</link>
         <guid isPermaLink="true">http://yourdomain.com/life/2016/09/04/%E6%91%A9%E6%8B%9C%E5%8D%95%E8%BD%A6.html</guid>
-        
-        
-        <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>每周二欢乐羽毛球</title>
-        <description>&lt;p&gt;说起每周二欢乐羽毛球,故事是这么由来的。&lt;/p&gt;
-
-&lt;p&gt;传说有一个神秘组织叫CIS,俗称技术保障大队。这个神秘组织由一群精英组成,这群精英中有各路高手。&lt;/p&gt;
-
-&lt;p&gt;高手各有特长,比如&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;玩大数据的&lt;/li&gt;
-  &lt;li&gt;玩编程开发的&lt;/li&gt;
-  &lt;li&gt;玩应用的&lt;/li&gt;
-  &lt;li&gt;玩服务器和网络的&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;这群人虽然非常厉害,十分低调。但是他们有一个共同的特征,就是他们都酷爱羽毛球。&lt;/p&gt;
-
-&lt;p&gt;他们想象自己是超级丹,球场之王,一次次跑动,漂亮的截杀,扣杀。&lt;/p&gt;
-
-&lt;p&gt;总之,酣畅淋漓!!!炫酷无比!!!&lt;/p&gt;
-
-&lt;p&gt;后来,CIS这个神秘组织知道了这么一群人,于是每周二就有了欢乐羽毛球。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;于是每周我都在想,这个周二即将过去,下一个周二还会远吗?&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 30 Aug 2016 22:45:14 +0800</pubDate>
-        <link>http://yourdomain.com/life/2016/08/30/%E6%AF%8F%E5%91%A8%E4%BA%8C%E6%AC%A2%E4%B9%90%E7%BE%BD%E6%AF%9B%E7%90%83.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/life/2016/08/30/%E6%AF%8F%E5%91%A8%E4%BA%8C%E6%AC%A2%E4%B9%90%E7%BE%BD%E6%AF%9B%E7%90%83.html</guid>
-        
-        
-        <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>轮滑</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;2016/08/28&lt;/h3&gt;
-
-&lt;p&gt;昨天去南翔轮滑了,就在家乐福后面的那个小区,小区的地板还不错,但是距离太短了,只能来回滑= =。&lt;/p&gt;
-
-&lt;p&gt;感觉昨天的运动量还可以,好像慢慢也比较熟练了。但是就是感觉轮滑鞋不够贴紧脚,可能有点大吧,也许买41号可以正好。&lt;/p&gt;
-
-&lt;p&gt;下次周末有空再去滑,学点新东西感觉还是棒棒哒,特别是滑快的话还是很酷哒。&lt;/p&gt;
-
-&lt;p&gt;我这把年纪了,感觉轮滑像是小孩玩的东西了。不过我的目的还是学习,学习新东西,恩恩,增加自信,然后再强健体魄,这是最重要哒&lt;/p&gt;
-
-&lt;p&gt;此处省略一千字&lt;/p&gt;
-
-&lt;p&gt;哈哈哈哈哈&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;2016/10/15&lt;/h3&gt;
-
-&lt;p&gt;后来我又去了次轮滑,这次是在家旁边的一家公司里面,公司里面的路面蛮平整的,两条道,就这样来回滑,听听歌,满放松的。&lt;/p&gt;
-
-&lt;p&gt;滑着滑着感觉越来越熟练了,现在也不会摔地上了。但是其中发生了个小插曲。这家公司的小领导跑过来了,发现我在滑,貌似是不允许。&lt;/p&gt;
-
-&lt;p&gt;其实我也知道,哈哈,后来被赶出去了。可是他趾高气昂,这点让我不爽,素质有点差啊。&lt;/p&gt;
-</description>
-        <pubDate>Sun, 28 Aug 2016 11:01:14 +0800</pubDate>
-        <link>http://yourdomain.com/life/2016/08/28/%E8%BD%AE%E6%BB%91.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/life/2016/08/28/%E8%BD%AE%E6%BB%91.html</guid>
         
         
         <category>life</category>
