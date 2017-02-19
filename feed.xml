@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Feb 2017 22:31:01 +0800</pubDate>
-    <lastBuildDate>Sun, 19 Feb 2017 22:31:01 +0800</lastBuildDate>
+    <pubDate>Sun, 19 Feb 2017 23:00:49 +0800</pubDate>
+    <lastBuildDate>Sun, 19 Feb 2017 23:00:49 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -82,45 +82,81 @@
     
       <item>
         <title>netflow网络流量分析实践</title>
-        <description>&lt;p&gt;本期分享的内容是关于网络运维可视化中最重要的一环，即网络流量分析与展现。阐述如何使用自研工具替换昂贵的商用产品，并在生产系统成功应用的简要历程。因此这里会对技术做简要说明，希望能够给大家带来启发。
-一、背景
-  随着互联网的发展，应用种类越来越多，造成网络流量越来越大，流量成分越来越复杂。当网络出现延时，丢包等情况，急需通过流量分析的手段来定位故障。于是业界产生了思科netflow为主的流量分析协议，类似的协议的还有sflow,cflow,netstream等等，与传统基于SNMP、网络探针、实时抓包分析方法不同，它利用Flow技术来收集网络中有关流量的重要信息，用于监视网络活动，帮助用户了解流量构成、协议分布和用户活动，回答谁(Who)在什么时间(When)、什么地方(Where)、执行什么行为(What)等最关心的问题。
-  公司之前使用商用的解决方案，成本较高。由于网络运维规模的日益增大，出于网络可视化的运维需求以及成本考虑，我们设计并自研基于netflow的流量分析工具。NetFlow最初是由Cisco开发的，由于使用广泛，目前很多厂家都可以实现，如：Juniper、Extreme、Foundry、H3C等。Cisco的NetFlow也有多种版本，如V5、V7、V8、V9。目前NetFlow V9是主流。因此本文主要针对NetFlow V9，
-   该版本数据包中的基本元素包含哪些内容呢?首先从Flow讲起，一个IP数据包的Flow至少定义了下面7个关键元素：
-	Ø 源IP地址;
-	Ø 目的IP地址;
-	Ø 源端口号;
-	Ø 目的端口号;
-	Ø 第三层协议的类型;
-	Ø TOS字段;
-	Ø 网络设备输入/输出的逻辑端口(if index)
-	以上7个字段定义了一个基本的Flow信息。 Netflow就是利用分析IP数据包的上述7种属性，快速区分网络中传送的各种类型的业务数据流。
-	1. Cache管理
-在NetFlow中有两个关键组件：
-(1) NetFlow Cache，主要描述流缓存(或者说源数据)如何存放在Cache中。
-NetFlow缓存管理机制中包含一系列高度精细化算法，能够有效地判断一个报文是属于已存在Flow的一部分还是应该在缓存中产生一条新的Flow。这些算法也能动态更新缓存中Flow的信息，并且判断哪些Flow应该到期终止。
-(2) NetFlow Export，数据流的输出机制，主要描述了数据流是如何输出并被分析器接收的。首先了解NetFlow Cache(缓存机制)。当缓存中的Flow到期后，就产生一个将Flow输出的动作。将超时的Flow信息以数据报文的方式输出，叫做“NetFlow Export”，这些输出的报文包含30条以上的Flow信息。这些NetFlow信息一般是无法识别的，需由专用收集器(Flow Collector)采集到并做出进一步分析，这些Flow Collector能够识别NetFlow的特殊格式。
-2.输出格式
-NetFlow的输出报文包含报头和一系列的Flow流，报头包含系列号、记录数、系统时间等，Flow流包含具体内容，如IP地址、端口、路由信息等。各个版本的NetFlow格式都相同，且NetFlow采用UDP报文，这更有利于大流量情况下的数据报文传输。换句话说，在路由器，防火墙等网络设备中如要使用NetFlow就不能禁用UDP端口，否则无法接收设备传递的信息。
-3.抽样机制
-在Netflow的实际应用中，它不是时刻都把数据包抓取过来，而是采用抽样的机制，通过使用抽样技术可以降低路由器的CPU利用率，减少Flow的输出量，但仍然可以监测到大多数的流量信息。当我们不需要了解网络流量的每个Flow的具体细节的时候，抽样就成了比较好的选择。但流量计费系统采用NetFlow会造成误差，使得NetFlow输出有时不能准确反映流量的实际情况。这时如果你的流量计费系统选用Netflow就不太合适了。
-4.性能影响
-使用任何一种技术作为工程师最应该关注它的性能问题。由于在设备缓存中Flow的生成，需要消耗系统资源同样，将Flow格式化成特定的输出报文并将报文输出，也是要消耗系统资源，因此在设备上使用NetFlow时，肯定就会影响设备性能。由于高端Cisco设备(如6500、7600系列等)都是通过ASIC硬件处理数据包，所以占用10%～20%利用率均属正常。注意，在使用中CPU的利用率会随着缓存中Flow条目的增大而增加，所以在高负载情况下，一定要慎用Netflow功能。
-二、系统构架
-&lt;img src=&quot;https://davidsome.github.io/img/netflow.png&quot; alt=&quot;netflow&quot; /&gt;
-   本系统分为如下几大模块。
-   收集模块：使用golang实现的收集器，基于socket udp网络通信，将收集的flow包解析，获取需要的流字段和值，进行数据加工成JSON数据，送入消息队列kafka。可以绑定多个UDP端口进行多进程的收集，保证最快的收集性能。收集器可以分布式部署，灵活可扩展。
-   聚合模块：从kafka消息队列里实时接收并聚合数据，可以按多维度聚合，时间上按天聚合，按小时聚合数据，内容上按7个flow的关键元素聚合完再送入kafka消息队列。
-   存储模块：后端存储使用ES，使用&lt;a href=&quot;https://github.com/childe/hangout&quot;&gt;hangout&lt;/a&gt;工具从kafka消息队列消费flow数据进ES。
-   分析模块：自制web页面展示图表，报表功能。用户在界面上发起请求，实时向ES集群发起请求，ES分析数据，聚合并展现各个维度的分析结果给用户。
-三、系统主要实现的功能
-  （1）流量监控和分析，通过高速引擎对所接收的流数据进行解析，生成各种有用的图表，以满足带宽监视和流量分析的目的。&lt;/p&gt;
+        <description>&lt;p&gt;本期分享的内容是关于网络运维可视化中最重要的一环，即网络流量分析与展现。阐述如何使用自研工具替换昂贵的商用产品，并在生产系统成功应用的简要历程。因此这里会对技术做简要说明，希望能够给大家带来启发。&lt;/p&gt;
 
-&lt;p&gt;（2）容量规划，通过分析网络流量及带宽的使用趋势，为制定网络带宽容量规划提供数据支撑。
-  （3）支持主流设备和Flow协议分析，支持所有主流厂商的网络设备以及防火墙设备，能够解析NetFlow、sFlow、NetStream等协议。
-四、总结
-  通过该工具，能够第一时间帮助定位故障，实现网络流量可视化。未来，我们希望能够接入更多设备，增加告警功能。增加更多维度，在使用上更加人性化。&lt;/p&gt;
+&lt;p&gt;一、背景&lt;/p&gt;
 
+&lt;p&gt;随着互联网的发展，应用种类越来越多，造成网络流量越来越大，流量成分越来越复杂。当网络出现延时，丢包等情况，急需通过流量分析的手段来定位故障。于是业界产生了思科netflow为主的流量分析协议，类似的协议的还有sflow,cflow,netstream等等，与传统基于SNMP、网络探针、实时抓包分析方法不同，它利用Flow技术来收集网络中有关流量的重要信息，用于监视网络活动，帮助用户了解流量构成、协议分布和用户活动，回答谁(Who)在什么时间(When)、什么地方(Where)、执行什么行为(What)等最关心的问题。&lt;/p&gt;
+
+&lt;p&gt;公司之前使用商用的解决方案，成本较高。由于网络运维规模的日益增大，出于网络可视化的运维需求以及成本考虑，我们设计并自研基于netflow的流量分析工具。NetFlow最初是由Cisco开发的，由于使用广泛，目前很多厂家都可以实现，如：Juniper、Extreme、Foundry、H3C等。Cisco的NetFlow也有多种版本，如V5、V7、V8、V9。目前NetFlow V9是主流。因此本文主要针对NetFlow V9，&lt;/p&gt;
+
+&lt;p&gt;该版本数据包中的基本元素包含哪些内容呢?首先从Flow讲起，一个IP数据包的Flow至少定义了下面7个关键元素：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ø 源IP地址;
+
+Ø 目的IP地址;
+
+Ø 源端口号;
+
+Ø 目的端口号;
+
+Ø 第三层协议的类型;
+
+Ø TOS字段;
+
+Ø 网络设备输入/输出的逻辑端口(if index)
+
+以上7个字段定义了一个基本的Flow信息。 Netflow就是利用分析IP数据包的上述7种属性，快速区分网络中传送的各种类型的业务数据流。
+
+1. Cache管理
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在NetFlow中有两个关键组件：&lt;/p&gt;
+
+&lt;p&gt;(1) NetFlow Cache，主要描述流缓存(或者说源数据)如何存放在Cache中。&lt;/p&gt;
+
+&lt;p&gt;NetFlow缓存管理机制中包含一系列高度精细化算法，能够有效地判断一个报文是属于已存在Flow的一部分还是应该在缓存中产生一条新的Flow。这些算法也能动态更新缓存中Flow的信息，并且判断哪些Flow应该到期终止。&lt;/p&gt;
+
+&lt;p&gt;(2) NetFlow Export，数据流的输出机制，主要描述了数据流是如何输出并被分析器接收的。首先了解NetFlow Cache(缓存机制)。当缓存中的Flow到期后，就产生一个将Flow输出的动作。将超时的Flow信息以数据报文的方式输出，叫做“NetFlow Export”，这些输出的报文包含30条以上的Flow信息。这些NetFlow信息一般是无法识别的，需由专用收集器(Flow Collector)采集到并做出进一步分析，这些Flow Collector能够识别NetFlow的特殊格式。&lt;/p&gt;
+
+&lt;p&gt;2.输出格式&lt;/p&gt;
+
+&lt;p&gt;NetFlow的输出报文包含报头和一系列的Flow流，报头包含系列号、记录数、系统时间等，Flow流包含具体内容，如IP地址、端口、路由信息等。各个版本的NetFlow格式都相同，且NetFlow采用UDP报文，这更有利于大流量情况下的数据报文传输。换句话说，在路由器，防火墙等网络设备中如要使用NetFlow就不能禁用UDP端口，否则无法接收设备传递的信息。&lt;/p&gt;
+
+&lt;p&gt;3.抽样机制&lt;/p&gt;
+
+&lt;p&gt;在Netflow的实际应用中，它不是时刻都把数据包抓取过来，而是采用抽样的机制，通过使用抽样技术可以降低路由器的CPU利用率，减少Flow的输出量，但仍然可以监测到大多数的流量信息。当我们不需要了解网络流量的每个Flow的具体细节的时候，抽样就成了比较好的选择。但流量计费系统采用NetFlow会造成误差，使得NetFlow输出有时不能准确反映流量的实际情况。这时如果你的流量计费系统选用Netflow就不太合适了。&lt;/p&gt;
+
+&lt;p&gt;4.性能影响&lt;/p&gt;
+
+&lt;p&gt;使用任何一种技术作为工程师最应该关注它的性能问题。由于在设备缓存中Flow的生成，需要消耗系统资源同样，将Flow格式化成特定的输出报文并将报文输出，也是要消耗系统资源，因此在设备上使用NetFlow时，肯定就会影响设备性能。由于高端Cisco设备(如6500、7600系列等)都是通过ASIC硬件处理数据包，所以占用10%～20%利用率均属正常。注意，在使用中CPU的利用率会随着缓存中Flow条目的增大而增加，所以在高负载情况下，一定要慎用Netflow功能。&lt;/p&gt;
+
+&lt;p&gt;二、系统构架&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://davidsome.github.io/img/netflow.png&quot; alt=&quot;netflow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;本系统分为如下几大模块。&lt;/p&gt;
+
+&lt;p&gt;收集模块：使用golang实现的收集器，基于socket udp网络通信，将收集的flow包解析，获取需要的流字段和值，进行数据加工成JSON数据，送入消息队列kafka。可以绑定多个UDP端口进行多进程的收集，保证最快的收集性能。收集器可以分布式部署，灵活可扩展。&lt;/p&gt;
+
+&lt;p&gt;聚合模块：从kafka消息队列里实时接收并聚合数据，可以按多维度聚合，时间上按天聚合，按小时聚合数据，内容上按7个flow的关键元素聚合完再送入kafka消息队列。&lt;/p&gt;
+
+&lt;p&gt;存储模块：后端存储使用ES，使用&lt;a href=&quot;https://github.com/childe/hangout&quot;&gt;hangout&lt;/a&gt;工具从kafka消息队列消费flow数据进ES。&lt;/p&gt;
+
+&lt;p&gt;分析模块：自制web页面展示图表，报表功能。用户在界面上发起请求，实时向ES集群发起请求，ES分析数据，聚合并展现各个维度的分析结果给用户。&lt;/p&gt;
+
+&lt;p&gt;三、系统主要实现的功能&lt;/p&gt;
+
+&lt;p&gt;（1）流量监控和分析，通过高速引擎对所接收的流数据进行解析，生成各种有用的图表，以满足带宽监视和流量分析的目的。&lt;/p&gt;
+
+&lt;p&gt;（2）容量规划，通过分析网络流量及带宽的使用趋势，为制定网络带宽容量规划提供数据支撑。&lt;/p&gt;
+
+&lt;p&gt;（3）支持主流设备和Flow协议分析，支持所有主流厂商的网络设备以及防火墙设备，能够解析NetFlow、sFlow、NetStream等协议。&lt;/p&gt;
+
+&lt;p&gt;四、总结&lt;/p&gt;
+
+&lt;p&gt;通过该工具，能够第一时间帮助定位故障，实现网络流量可视化。未来，我们希望能够接入更多设备，增加告警功能。增加更多维度，在使用上更加人性化。&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Dec 2016 10:00:14 +0800</pubDate>
         <link>http://yourdomain.com/work/2016/12/03/netflow%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E5%AE%9E%E8%B7%B5.html</link>
