@@ -282,7 +282,8 @@ pre {
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 24px;
+  background-color: #E0EBF5; }
 
 /**
  * Posts
