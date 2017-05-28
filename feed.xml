@@ -6,9 +6,28 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 May 2017 11:29:49 +0800</pubDate>
-    <lastBuildDate>Sun, 28 May 2017 11:29:49 +0800</lastBuildDate>
+    <pubDate>Sun, 28 May 2017 11:38:32 +0800</pubDate>
+    <lastBuildDate>Sun, 28 May 2017 11:38:32 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>专利</title>
+        <description>&lt;p&gt;我的专利发表了《基于mac地址的坐席端口安全管理方法》&lt;/p&gt;
+
+&lt;p&gt;该专利描述了如何通过自动化的系统采集，数据建模，流程闭环建立了办公坐席端口安全管理机制。&lt;/p&gt;
+
+&lt;p&gt;原理基于 关闭7天内未出现mac的交换机端口。&lt;/p&gt;
+
+&lt;p&gt;期待下一篇专利～～。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 May 2017 10:00:14 +0800</pubDate>
+        <link>http://yourdomain.com/work/2017/05/28/%E4%B8%93%E5%88%A9.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2017/05/28/%E4%B8%93%E5%88%A9.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>open-falcon监控系统</title>
@@ -414,37 +433,6 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
         
         
         <category>work</category>
-        
-      </item>
-    
-      <item>
-        <title>看晓松奇谈有感</title>
-        <description>&lt;p&gt;每周五看晓松奇谈已经成为了我的一个习惯。最喜欢的就是听晓松讲各国文化,历史,地理,风土人情等等。&lt;/p&gt;
-
-&lt;p&gt;除了晓松奇谈,我还愿意看吴晓波频道,逻辑思维等talk show,自媒体。&lt;/p&gt;
-
-&lt;p&gt;微信公众号的话看鬼脚七的自媒体较多。&lt;/p&gt;
-
-&lt;p&gt;人都有三观,随着年龄的增长,接触的东西和人越来越多,人生观,价值观,世界观都会慢慢成熟发展,或许发生变化。&lt;/p&gt;
-
-&lt;p&gt;但限于时间,经济,圈子,工作等等,每个人不一定有能力切身去了解,去尝试。&lt;/p&gt;
-
-&lt;p&gt;所以这些自媒体和talk show帮助我们去体验另一种生活,倾听另一种观点,比如 环游世界80天。&lt;/p&gt;
-
-&lt;p&gt;就像书籍会带给我们另一种体验一样。&lt;/p&gt;
-
-&lt;p&gt;读万卷书,行万里路,人生才完整。&lt;/p&gt;
-
-&lt;p&gt;有机会的话,我们要去行万里路。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;希望晓松继续带我装逼带我飞。O(∩_∩)O哈哈~&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 05 Sep 2016 22:25:14 +0800</pubDate>
-        <link>http://yourdomain.com/life/2016/09/05/%E7%9C%8B%E6%99%93%E6%9D%BE%E5%A5%87%E8%B0%88%E6%9C%89%E6%84%9F.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/life/2016/09/05/%E7%9C%8B%E6%99%93%E6%9D%BE%E5%A5%87%E8%B0%88%E6%9C%89%E6%84%9F.html</guid>
-        
-        
-        <category>life</category>
         
       </item>
     
