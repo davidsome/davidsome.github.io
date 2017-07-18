@@ -6,9 +6,31 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 May 2017 11:49:07 +0800</pubDate>
-    <lastBuildDate>Sun, 28 May 2017 11:49:07 +0800</lastBuildDate>
+    <pubDate>Tue, 18 Jul 2017 21:21:31 +0800</pubDate>
+    <lastBuildDate>Tue, 18 Jul 2017 21:21:31 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>SDN网络</title>
+        <description>&lt;p&gt;SDN 与 Mininet 概述
+SDN 全名为（Software Defined Network）即软件定义网络，是现互联网中一种新型的网络创新架构,其核心技术 OpenFlow 通过网络设备控制面与数据面分离开来,从而实现网络流量的灵活控制,为网络及应用提供了良好的平台。而 Mininet 是一个轻量级软件定义网络和测试平台；它采用轻量级的虚拟化技术使一个单一的系统看起来像一个完整的网络运行想过的内核系统和用户代码，也可简单理解为 SDN 网络系统中的一种基于进程虚拟化平台，它支持 OpenFlow、OpenvSwith 等各种协议，Mininet 也可以模拟一个完整的网络主机、链接和交换机在同一台计算机上且有助于互动开发、测试和演示，尤其是那些使用 OpenFlow 和 SDN 技术；同时也可将此进程虚拟化的平台下代码迁移到真实的环境中。&lt;/p&gt;
+
+&lt;p&gt;Mininet 实现的特性
+支持 OpenFlow、OpenvSwitch 等软定义网路部件
+支持系统级的还原测试，支持复杂拓扑，自定义拓扑等
+提供 Python API, 方便多人协作开发
+很好的硬件移植性与高扩展性
+支持数千台主机的网络结构&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 18 Jul 2017 10:00:14 +0800</pubDate>
+        <link>http://yourdomain.com/work/2017/07/18/SDN%E7%BD%91%E7%BB%9C.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2017/07/18/SDN%E7%BD%91%E7%BB%9C.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>专利</title>
@@ -394,42 +416,6 @@ SRE不接触底层硬件如服务器，这也是高逼格的由来：Google 数�
         <pubDate>Sat, 01 Oct 2016 16:16:14 +0800</pubDate>
         <link>http://yourdomain.com/work/2016/10/01/GOPS%E5%85%A8%E7%90%83%E8%BF%90%E7%BB%B4%E5%A4%A7%E4%BC%9A.html</link>
         <guid isPermaLink="true">http://yourdomain.com/work/2016/10/01/GOPS%E5%85%A8%E7%90%83%E8%BF%90%E7%BB%B4%E5%A4%A7%E4%BC%9A.html</guid>
-        
-        
-        <category>work</category>
-        
-      </item>
-    
-      <item>
-        <title>《凤凰项目：一个运维的传奇故事》读后感</title>
-        <description>&lt;p&gt;读完了《凤凰项目：一个运维的传奇故事》。全书以小说方式叙述了一名新上任的运维VP成功解决种种IT问题，顺利完成重要的凤凰项目，帮助业务实现价值，最后公司得到发展，同时也保住了IT不被拆分。&lt;/p&gt;
-
-&lt;h3 id=&quot;it&quot;&gt;IT运维的问题&lt;/h3&gt;
-&lt;p&gt;故事的开头，整个IT陷入一片僵局中，运维内部被海量变更需求埋没，更加严重的是他们被各种各样的突发故障所折磨。新上任的比尔如何解决这些问题呢？&lt;/p&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;变更可视化&lt;/h3&gt;
-&lt;p&gt;在突发故障这个问题上，以及我自己的认同，一定是由变更引起，或者说是由未被有效管理的变更引起。于是，比尔马上对ITIL change流程做了梳理。这不是流程问题，而是流程／工具与人的实现问题，再好的流程经理如果给不出一套人人爱用的工具，那么一切都是白搭。“本来只需花5min的操作，却要花1小时录入各种字段，那套工具根本不可用”。大道至简，最简单的解决方式是忽略那些细节，管理者要看到的是变更以及变更之间的关系，大家都看得见的变更可以莫名奇妙的让工作快起来，看得见的变更能够让故障的恢复加速200%。而对于一线运维人员，没人愿意被与事情本身无关的工具所束缚。最后的解决方式居然是看板，将运维变更做成了看板，并且依据变更的特性区分不同的颜色，用小便贴纸贴在了强上。平安科技在ITIL上建立了完善的流程，这一点比荒野的主人公所在公司要好多了，感叹大家的执行力，但这里有一个问题，我们并没有让所有的人都看到你有多少变更。比尔用看板的方式，以最简的方式解决了变更可视化的问题。about us，我想这种方式是否适合我们，这是增加了工作量，还是加快了我们的处理速度，是否添加一个看板就行了，还是我们要继续咱们的流程工具呢？原来的流程工具最大的长处是保住变更质量，因为每一个变更步骤都要求变更主管执行，变更被拆分成了很细的粒度，如果将其替换为看板，其结果又会如何呢？&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;资源约束点&lt;/h3&gt;
-&lt;p&gt;资源约束点，在所有变更的路径上都会遇到约束点，他可能是人，也可能是一个必须串行处理的节点。在小说中，一名称为布伦特的高级工程师成为了约束点，任何关键人物中他都必不可少，这其中的原因被推测为人性的安全感，他掌握了其他人不知道的配置信息，或者他本身很强大，强大到他的工作其他人无法处理。在运维团队，后者存在的可能性并不高，特别是以技术为导向的团队。除了人意外，不可见的配置管理，不完善的运维对象都将成为约束点，我的团队中就遇到过因为防火墙的拓扑不清晰导致效率缓慢的。如何打破约束点？如何激励团队OPEN/SHARE，打破人性弱点才是关键。 “每解决一个问题，我们知识库的内容就多出一篇文章，而解决此问题的人愈加之多”。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;安全审计&lt;/h3&gt;
-&lt;p&gt;书中的大型企业，安全审计部门关注着漏洞、补丁、缺陷，他们会要求运维部门无时无刻的升级、修复，之后造成一波又一波的异常故障。除此之外，安全审计还会购买一些稀奇古怪的东西，这就是他们的KPI，或者说他们必须这么做。还好，书中的安全人员和我遇到或经历的一样，他们也和公司发展大方向，和运维团队战在了一起，他们不再是公司发展的阻碍，但其他公司可不会这样吧？&lt;/p&gt;
-
-&lt;h3 id=&quot;devops&quot;&gt;devops运维自动化&lt;/h3&gt;
-&lt;p&gt;在变更可视化、消除资源约束以及打破安全的折磨之后，比尔最后一步是运维自动化，标准化业务逻辑交付过程，通过自动化的方式开放给开发人员，在这里有一本《持续交付》的专著供我们参考。devops是一种文化认同，如同automation infrastructure一样，去年我们花费了大量精力在运维自动化上，但要最终做到完全的一键式流程，应用架构、网络架构需要做相当大的适应性。“每天部署十次不在话下”，我在想其实我们已经做到。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;关于三步工作法&lt;/h3&gt;
-&lt;p&gt;三步工作法，如此之简单，标准化，持续优化，将其转变成一种文化，over，如何执行呢？&lt;/p&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;运维的四种工作&lt;/h3&gt;
-&lt;p&gt;业务项目、运维项目、突发事件、项目转变的变更。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://davidsome.github.io/img/fenhuangxiangmu.png&quot; alt=&quot;fenhuangxiangmu&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 14 Sep 2016 22:16:14 +0800</pubDate>
-        <link>http://yourdomain.com/work/2016/09/14/%E5%87%A4%E5%87%B0%E9%A1%B9%E7%9B%AE-%E4%B8%80%E4%B8%AA%E8%BF%90%E7%BB%B4%E7%9A%84%E4%BC%A0%E5%A5%87%E6%95%85%E4%BA%8B-%E8%AF%BB%E5%90%8E%E6%84%9F.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/work/2016/09/14/%E5%87%A4%E5%87%B0%E9%A1%B9%E7%9B%AE-%E4%B8%80%E4%B8%AA%E8%BF%90%E7%BB%B4%E7%9A%84%E4%BC%A0%E5%A5%87%E6%95%85%E4%BA%8B-%E8%AF%BB%E5%90%8E%E6%84%9F.html</guid>
         
         
         <category>work</category>
